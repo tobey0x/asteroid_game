@@ -40,5 +40,5 @@ class Player(CircleShape):
         self.move(-dt)
           
   def move(self, dt):
-    self.position.x += PLAYER_SPEED * dt
-    self.position.y += PLAYER_SPEED * dt
+    forward = pygame.Vector2(0, 1).rotate(self.rotation)
+    self.position += forward * PLAYER_SPEED * dt
