@@ -16,6 +16,8 @@ def main():
     asteroids = pygame.sprite.Group()
     shots = pygame.sprite.Group()
     
+    shots.containers = (shots, updatable, drawable)
+    
     Player.containers = (updatable, drawable)
     player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
     
